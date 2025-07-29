@@ -494,6 +494,100 @@ st.markdown("""
         color: #ffffff !important;
     }
     
+    /* DATE PICKER POPUPS - Same dark theme as time picker */
+    
+    /* Target the actual date picker dropdown popup */
+    .stDateInput div[data-baseweb="popover-content"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stDateInput div[data-baseweb="popover-content"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Date picker calendar grid */
+    .stDateInput div[data-baseweb="calendar"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stDateInput div[data-baseweb="calendar"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Date picker days */
+    .stDateInput div[role="button"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stDateInput div[role="button"]:hover {
+        background: #5a5a5a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Date picker navigation (month/year) */
+    .stDateInput button {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stDateInput button:hover {
+        background: #5a5a5a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Date picker month/year headers */
+    .stDateInput div[data-baseweb="calendar"] div {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Date picker selected date */
+    .stDateInput div[data-baseweb="calendar"] [aria-selected="true"] {
+        background: #ff3333 !important;
+        color: #ffffff !important;
+    }
+    
+    /* Date picker today highlight */
+    .stDateInput div[data-baseweb="calendar"] [aria-label*="today"] {
+        background: #666666 !important;
+        color: #ffffff !important;
+    }
+    
+    /* Universal date picker targeting */
+    .stDateInput div[data-baseweb="popover"] {
+        background: #4a4a4a !important;
+    }
+    .stDateInput div[data-baseweb="popover"] > div {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stDateInput div[data-baseweb="popover"] div {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stDateInput div[data-baseweb="popover"] span {
+        color: #ffffff !important;
+    }
+    
+    /* Date picker table elements */
+    .stDateInput table {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stDateInput table * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stDateInput td {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stDateInput td:hover {
+        background: #5a5a5a !important;
+        color: #ffffff !important;
+    }
+    
     /* Text area */
     .stTextArea > div > div > textarea {
         background: rgba(20, 20, 20, 0.8) !important;
