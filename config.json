@@ -26,11 +26,11 @@
             "role": "admin"
         },
         "user1": {
-            "password": "user123",
+            "password": "b3N3rdY!",
             "role": "requester"
         },
         "user2": {
-            "password": "user456",
+            "password": "b3N3rdY!",
             "role": "requester"
         }
     },
