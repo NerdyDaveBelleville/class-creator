@@ -205,54 +205,54 @@ st.markdown("""
     
     /* Select boxes */
     .stSelectbox > div > div {
-        background: #000000 !important;
-        border: 2px solid #333333 !important;
+        background: #333333 !important;
+        border: 2px solid #666666 !important;
         border-radius: 12px !important;
         color: #ffffff !important;
         transition: all 0.3s ease !important;
     }
     .stSelectbox > div > div:focus-within {
         border: 2px solid transparent !important;
-        background: linear-gradient(#000000, #000000) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
+        background: linear-gradient(#333333, #333333) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
     }
     
     /* Select box text and options */
     .stSelectbox > div > div > div {
-        background: #000000 !important;
+        background: #333333 !important;
         color: #ffffff !important;
     }
     .stSelectbox option {
-        background: #000000 !important;
+        background: #333333 !important;
         color: #ffffff !important;
     }
     
     /* Multi-select */
     .stMultiSelect > div > div {
-        background: #000000 !important;
-        border: 2px solid #333333 !important;
+        background: #333333 !important;
+        border: 2px solid #666666 !important;
         border-radius: 12px !important;
         color: #ffffff !important;
     }
     .stMultiSelect > div > div:focus-within {
         border: 2px solid transparent !important;
-        background: linear-gradient(#000000, #000000) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
+        background: linear-gradient(#333333, #333333) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
     }
     
     /* Multi-select dropdown options */
     .stMultiSelect > div > div > div {
-        background: #000000 !important;
+        background: #333333 !important;
         color: #ffffff !important;
     }
     .stMultiSelect option {
-        background: #000000 !important;
+        background: #333333 !important;
         color: #ffffff !important;
     }
     
     /* Multi-select selected items */
     .stMultiSelect span {
-        background: #333333 !important;
+        background: #555555 !important;
         color: #ffffff !important;
         border-radius: 6px !important;
     }
@@ -278,17 +278,17 @@ st.markdown("""
         color: #ffffff !important;
     }
     
-    /* Time input */
+    /* Time input with black text */
     .stTimeInput > div > div > input {
-        background: #000000 !important;
+        background: #ffffff !important;
         border: 2px solid #333333 !important;
         border-radius: 12px !important;
         padding: 0.75rem !important;
-        color: #ffffff !important;
+        color: #000000 !important;
     }
     .stTimeInput > div > div > input:focus {
         border: 2px solid transparent !important;
-        background: linear-gradient(#000000, #000000) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
+        background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
     }
     
@@ -307,15 +307,25 @@ st.markdown("""
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
     }
     
-    /* Checkboxes with rainbow labels */
+    /* Checkboxes with white labels */
     .stCheckbox > label {
         font-family: 'Inter', sans-serif !important;
-        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-        background-size: 400% 400%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        animation: rainbow 4s ease infinite;
+        color: #ffffff !important;
+        font-weight: 500 !important;
+    }
+    
+    /* Checkbox labels - white text */
+    .stCheckbox label {
+        color: #ffffff !important;
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 500 !important;
+        background: none !important;
+        -webkit-text-fill-color: #ffffff !important;
+    }
+    
+    /* Meeting Days section styling */
+    .stCheckbox div label {
+        color: #ffffff !important;
         font-weight: 500 !important;
     }
     
