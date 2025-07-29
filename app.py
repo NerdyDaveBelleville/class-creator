@@ -1053,6 +1053,94 @@ st.markdown("""
     ::-webkit-scrollbar-thumb:hover {
         filter: brightness(1.2);
     }
+    
+    /* THE OPPENHEIMER OPTION - Ultimate CSS targeting */
+    
+    /* Body-level dropdown override */
+    body div[data-baseweb="popover-content"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    body div[data-baseweb="popover-content"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Target dropdown by position/layout */
+    div[style*="position: fixed"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    div[style*="position: fixed"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Target all absolute positioned dropdowns */
+    div[style*="position: absolute"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    div[style*="position: absolute"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Ultra-specific Streamlit targeting */
+    .main div[data-baseweb="popover-content"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .main div[data-baseweb="popover-content"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Target by z-index (dropdowns usually have high z-index) */
+    div[style*="z-index"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    div[style*="z-index"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Streamlit app container targeting */
+    #root div[data-baseweb="popover-content"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    #root div[data-baseweb="popover-content"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Target ANY white background div that might be a dropdown */
+    div[style*="background-color: rgb(255, 255, 255)"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    div[style*="background-color: rgb(255, 255, 255)"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Manhattan Project level targeting - override everything */
+    * {
+        --dropdown-bg: #4a4a4a !important;
+        --dropdown-color: #ffffff !important;
+    }
+    
+    /* Force all potential dropdown containers */
+    div[role="presentation"]:not(.stApp):not(.main) {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    div[role="presentation"]:not(.stApp):not(.main) * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
     </style>
 """, unsafe_allow_html=True)
 
