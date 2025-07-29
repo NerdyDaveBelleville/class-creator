@@ -332,44 +332,68 @@ st.markdown("""
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
     }
     
-    /* Time dropdown options - black background like date input */
-    .stTimeInput div[role="listbox"] {
-        background: #000000 !important;
-        border: 2px solid #333333 !important;
-    }
-    .stTimeInput div[role="option"] {
-        background: #000000 !important;
-        color: #ffffff !important;
-    }
-    .stTimeInput div[role="option"]:hover {
-        background: #333333 !important;
-        color: #ffffff !important;
-    }
-    
-    /* Time picker dropdown styling */
-    .stTimeInput div[data-baseweb="select"] > div > div {
-        background: #000000 !important;
-    }
-    .stTimeInput div[data-baseweb="select"] div[role="listbox"] div {
-        background: #000000 !important;
-        color: #ffffff !important;
-    }
-    
-    /* Additional time dropdown targeting */
+    /* Time picker popup - black text on light background */
     .stTimeInput div[data-baseweb="popover"] {
-        background: #000000 !important;
+        background: #f0f0f0 !important;
     }
     .stTimeInput div[data-baseweb="popover"] > div {
-        background: #000000 !important;
-        border: 2px solid #333333 !important;
+        background: #f0f0f0 !important;
+        color: #000000 !important;
     }
+    .stTimeInput div[data-baseweb="popover"] div {
+        background: #f0f0f0 !important;
+        color: #000000 !important;
+    }
+    .stTimeInput div[data-baseweb="popover"] span {
+        color: #000000 !important;
+    }
+    
+    /* Time options in the picker */
+    .stTimeInput div[role="listbox"] {
+        background: #f0f0f0 !important;
+        color: #000000 !important;
+    }
+    .stTimeInput div[role="option"] {
+        background: #f0f0f0 !important;
+        color: #000000 !important;
+    }
+    .stTimeInput div[role="option"]:hover {
+        background: #e0e0e0 !important;
+        color: #000000 !important;
+    }
+    
+    /* Time picker specific elements */
     .stTimeInput li {
-        background: #000000 !important;
-        color: #ffffff !important;
+        background: #f0f0f0 !important;
+        color: #000000 !important;
     }
     .stTimeInput li:hover {
-        background: #333333 !important;
-        color: #ffffff !important;
+        background: #e0e0e0 !important;
+        color: #000000 !important;
+    }
+    
+    /* Additional time picker targeting */
+    .stTimeInput div[data-baseweb="select"] div {
+        background: #f0f0f0 !important;
+        color: #000000 !important;
+    }
+    .stTimeInput div[data-baseweb="menu"] {
+        background: #f0f0f0 !important;
+        color: #000000 !important;
+    }
+    .stTimeInput div[data-baseweb="menu"] div {
+        background: #f0f0f0 !important;
+        color: #000000 !important;
+    }
+    
+    /* Time picker dropdown menu */
+    .stTimeInput [role="menuitem"] {
+        background: #f0f0f0 !important;
+        color: #000000 !important;
+    }
+    .stTimeInput [role="menuitem"]:hover {
+        background: #e0e0e0 !important;
+        color: #000000 !important;
     }
     
     /* Text area */
