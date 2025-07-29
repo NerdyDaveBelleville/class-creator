@@ -70,6 +70,49 @@ st.markdown("""
         filter: brightness(1.2) !important;
     }
     
+    /* Form submit buttons (login, submit request, etc.) */
+    .stForm button, .stForm input[type="submit"], button[kind="primary"], button[kind="secondary"] {
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) !important;
+        background-size: 400% 400% !important;
+        animation: rainbow 3s ease infinite !important;
+        color: #000000 !important;
+        border: none !important;
+        border-radius: 12px !important;
+        padding: 0.75rem 1.5rem !important;
+        font-weight: 700 !important;
+        font-family: 'Inter', sans-serif !important;
+        box-shadow: 0 8px 32px rgba(255, 255, 255, 0.3) !important;
+        transition: all 0.3s ease !important;
+        text-shadow: none !important;
+        cursor: pointer !important;
+    }
+    .stForm button:hover, .stForm input[type="submit"]:hover, button[kind="primary"]:hover, button[kind="secondary"]:hover {
+        transform: translateY(-2px) scale(1.05) !important;
+        box-shadow: 0 12px 40px rgba(255, 255, 255, 0.4) !important;
+        filter: brightness(1.2) !important;
+    }
+    
+    /* Specific targeting for form submit buttons */
+    div[data-testid="stForm"] button {
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) !important;
+        background-size: 400% 400% !important;
+        animation: rainbow 3s ease infinite !important;
+        color: #000000 !important;
+        border: none !important;
+        border-radius: 12px !important;
+        padding: 0.75rem 1.5rem !important;
+        font-weight: 700 !important;
+        font-family: 'Inter', sans-serif !important;
+        box-shadow: 0 8px 32px rgba(255, 255, 255, 0.3) !important;
+        transition: all 0.3s ease !important;
+        text-shadow: none !important;
+    }
+    div[data-testid="stForm"] button:hover {
+        transform: translateY(-2px) scale(1.05) !important;
+        box-shadow: 0 12px 40px rgba(255, 255, 255, 0.4) !important;
+        filter: brightness(1.2) !important;
+    }
+    
     /* Download button with rainbow gradient */
     .stDownloadButton > button {
         background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) !important;
