@@ -750,6 +750,60 @@ st.markdown("""
         color: #ffffff !important;
     }
     
+    /* NUCLEAR OPTION - Universal multi-select targeting */
+    
+    /* Universal menu targeting for ALL dropdowns */
+    [data-baseweb="menu"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    [data-baseweb="menu"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Universal listbox targeting */
+    [data-baseweb="select"] [role="listbox"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    [data-baseweb="select"] [role="option"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    [data-baseweb="select"] [role="option"]:hover {
+        background: #5a5a5a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Nuclear option for select dropdowns */
+    [data-baseweb="select"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    [data-baseweb="select"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Super nuclear option - any dropdown list */
+    ul[role="listbox"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    ul[role="listbox"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    ul[role="listbox"] li {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    ul[role="listbox"] li:hover {
+        background: #5a5a5a !important;
+        color: #ffffff !important;
+    }
+    
     /* Text area */
     .stTextArea > div > div > textarea {
         background: rgba(20, 20, 20, 0.8) !important;
