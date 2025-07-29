@@ -332,110 +332,110 @@ st.markdown("""
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
     }
     
-    /* Time picker popup - black text on light background */
+    /* Time picker popup - medium-dark grey background for white text visibility */
     .stTimeInput div[data-baseweb="popover"] {
-        background: #f0f0f0 !important;
+        background: #4a4a4a !important;
     }
     .stTimeInput div[data-baseweb="popover"] > div {
-        background: #f0f0f0 !important;
-        color: #000000 !important;
+        background: #4a4a4a !important;
+        color: #ffffff !important;
     }
     .stTimeInput div[data-baseweb="popover"] div {
-        background: #f0f0f0 !important;
-        color: #000000 !important;
+        background: #4a4a4a !important;
+        color: #ffffff !important;
     }
     .stTimeInput div[data-baseweb="popover"] span {
-        color: #000000 !important;
+        color: #ffffff !important;
     }
     
     /* Time options in the picker */
     .stTimeInput div[role="listbox"] {
-        background: #f0f0f0 !important;
-        color: #000000 !important;
+        background: #4a4a4a !important;
+        color: #ffffff !important;
     }
     .stTimeInput div[role="option"] {
-        background: #f0f0f0 !important;
-        color: #000000 !important;
+        background: #4a4a4a !important;
+        color: #ffffff !important;
     }
     .stTimeInput div[role="option"]:hover {
-        background: #e0e0e0 !important;
-        color: #000000 !important;
+        background: #5a5a5a !important;
+        color: #ffffff !important;
     }
     
     /* Time picker specific elements */
     .stTimeInput li {
-        background: #f0f0f0 !important;
-        color: #000000 !important;
+        background: #4a4a4a !important;
+        color: #ffffff !important;
     }
     .stTimeInput li:hover {
-        background: #e0e0e0 !important;
-        color: #000000 !important;
+        background: #5a5a5a !important;
+        color: #ffffff !important;
     }
     
     /* Additional time picker targeting */
     .stTimeInput div[data-baseweb="select"] div {
-        background: #f0f0f0 !important;
-        color: #000000 !important;
+        background: #4a4a4a !important;
+        color: #ffffff !important;
     }
     .stTimeInput div[data-baseweb="menu"] {
-        background: #f0f0f0 !important;
-        color: #000000 !important;
+        background: #4a4a4a !important;
+        color: #ffffff !important;
     }
     .stTimeInput div[data-baseweb="menu"] div {
-        background: #f0f0f0 !important;
-        color: #000000 !important;
+        background: #4a4a4a !important;
+        color: #ffffff !important;
     }
     
     /* Time picker dropdown menu */
     .stTimeInput [role="menuitem"] {
-        background: #f0f0f0 !important;
-        color: #000000 !important;
+        background: #4a4a4a !important;
+        color: #ffffff !important;
     }
     .stTimeInput [role="menuitem"]:hover {
-        background: #e0e0e0 !important;
-        color: #000000 !important;
+        background: #5a5a5a !important;
+        color: #ffffff !important;
     }
     
     /* More comprehensive time picker targeting */
     .stTimeInput div[data-baseweb="popover"] * {
-        color: #000000 !important;
+        color: #ffffff !important;
     }
     .stTimeInput div[data-baseweb="menu"] * {
-        color: #000000 !important;
-        background: #f0f0f0 !important;
+        color: #ffffff !important;
+        background: #4a4a4a !important;
     }
     .stTimeInput [role="presentation"] {
-        background: #f0f0f0 !important;
+        background: #4a4a4a !important;
     }
     .stTimeInput [role="presentation"] * {
-        color: #000000 !important;
-        background: #f0f0f0 !important;
+        color: #ffffff !important;
+        background: #4a4a4a !important;
     }
     
     /* Target all text in time picker */
     .stTimeInput div[data-baseweb="select"] span {
-        color: #000000 !important;
+        color: #ffffff !important;
     }
     .stTimeInput div[data-baseweb="select"] div span {
-        color: #000000 !important;
+        color: #ffffff !important;
     }
     
     /* Streamlit specific time picker classes */
     .stTimeInput [class*="option"] {
-        background: #f0f0f0 !important;
-        color: #000000 !important;
+        background: #4a4a4a !important;
+        color: #ffffff !important;
     }
     .stTimeInput [class*="option"]:hover {
-        background: #e0e0e0 !important;
-        color: #000000 !important;
+        background: #5a5a5a !important;
+        color: #ffffff !important;
     }
     
     /* Universal text override for time picker */
     .stTimeInput div[role="listbox"] * {
-        color: #000000 !important;
+        color: #ffffff !important;
     }
     .stTimeInput div[role="option"] * {
-        color: #000000 !important;
+        color: #ffffff !important;
     }
     
     /* Text area */
