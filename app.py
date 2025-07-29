@@ -162,7 +162,7 @@ st.markdown("""
     
     /* Select boxes */
     .stSelectbox > div > div {
-        background: rgba(20, 20, 20, 0.8) !important;
+        background: #000000 !important;
         border: 2px solid #333333 !important;
         border-radius: 12px !important;
         color: #ffffff !important;
@@ -170,26 +170,53 @@ st.markdown("""
     }
     .stSelectbox > div > div:focus-within {
         border: 2px solid transparent !important;
-        background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
+        background: linear-gradient(#000000, #000000) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
+    }
+    
+    /* Select box text and options */
+    .stSelectbox > div > div > div {
+        background: #000000 !important;
+        color: #ffffff !important;
+    }
+    .stSelectbox option {
+        background: #000000 !important;
+        color: #ffffff !important;
     }
     
     /* Multi-select */
     .stMultiSelect > div > div {
-        background: rgba(20, 20, 20, 0.8) !important;
+        background: #000000 !important;
         border: 2px solid #333333 !important;
         border-radius: 12px !important;
         color: #ffffff !important;
     }
     .stMultiSelect > div > div:focus-within {
         border: 2px solid transparent !important;
-        background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
+        background: linear-gradient(#000000, #000000) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
+    }
+    
+    /* Multi-select dropdown options */
+    .stMultiSelect > div > div > div {
+        background: #000000 !important;
+        color: #ffffff !important;
+    }
+    .stMultiSelect option {
+        background: #000000 !important;
+        color: #ffffff !important;
+    }
+    
+    /* Multi-select selected items */
+    .stMultiSelect span {
+        background: #333333 !important;
+        color: #ffffff !important;
+        border-radius: 6px !important;
     }
     
     /* Date input */
     .stDateInput > div > div > input {
-        background: rgba(20, 20, 20, 0.8) !important;
+        background: #000000 !important;
         border: 2px solid #333333 !important;
         border-radius: 12px !important;
         padding: 0.75rem !important;
@@ -197,13 +224,20 @@ st.markdown("""
     }
     .stDateInput > div > div > input:focus {
         border: 2px solid transparent !important;
-        background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
+        background: linear-gradient(#000000, #000000) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
+    }
+    
+    /* Date picker popup */
+    .stDateInput div[data-baseweb="calendar"] {
+        background: #000000 !important;
+        border: 1px solid #333333 !important;
+        color: #ffffff !important;
     }
     
     /* Time input */
     .stTimeInput > div > div > input {
-        background: rgba(20, 20, 20, 0.8) !important;
+        background: #000000 !important;
         border: 2px solid #333333 !important;
         border-radius: 12px !important;
         padding: 0.75rem !important;
@@ -211,7 +245,7 @@ st.markdown("""
     }
     .stTimeInput > div > div > input:focus {
         border: 2px solid transparent !important;
-        background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
+        background: linear-gradient(#000000, #000000) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
     }
     
