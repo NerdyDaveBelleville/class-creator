@@ -664,6 +664,92 @@ st.markdown("""
         color: #ffffff !important;
     }
     
+    /* SELECT COURSE CODES DROPDOWN - Same dark theme */
+    
+    /* Target the multi-select dropdown popup */
+    .stMultiSelect div[data-baseweb="popover-content"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stMultiSelect div[data-baseweb="popover-content"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Multi-select dropdown list */
+    .stMultiSelect div[role="listbox"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stMultiSelect div[role="option"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stMultiSelect div[role="option"]:hover {
+        background: #5a5a5a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Multi-select options */
+    .stMultiSelect li {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stMultiSelect li:hover {
+        background: #5a5a5a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Multi-select menu targeting */
+    .stMultiSelect div[data-baseweb="menu"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stMultiSelect div[data-baseweb="menu"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Multi-select popover */
+    .stMultiSelect div[data-baseweb="popover"] {
+        background: #4a4a4a !important;
+    }
+    .stMultiSelect div[data-baseweb="popover"] > div {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stMultiSelect div[data-baseweb="popover"] div {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stMultiSelect div[data-baseweb="popover"] span {
+        color: #ffffff !important;
+    }
+    
+    /* Universal multi-select targeting */
+    .stMultiSelect div[role="listbox"] * {
+        color: #ffffff !important;
+    }
+    .stMultiSelect div[role="option"] * {
+        color: #ffffff !important;
+    }
+    
+    /* More aggressive multi-select targeting */
+    .stMultiSelect [data-baseweb="menu"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stMultiSelect [data-baseweb="menu"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Multi-select dropdown overlay */
+    .stMultiSelect div[data-baseweb="popover"] div[data-baseweb="popover-content"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
     /* Text area */
     .stTextArea > div > div > textarea {
         background: rgba(20, 20, 20, 0.8) !important;
