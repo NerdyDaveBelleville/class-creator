@@ -17,236 +17,310 @@ st.set_page_config(
     layout="wide"
 )
 
-# Custom CSS with Nerdy.com's modern color scheme
+# Custom CSS with black background and rainbow gradient fonts
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     
     /* Main background and text colors */
     .stApp {
-        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-        color: #1e293b;
+        background: #000000;
+        color: #ffffff;
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
     
-    /* Headers */
-    h1, h2, h3, .st-emotion-cache-10trblm {
-        color: #1e40af !important;
-        font-weight: 600;
-        font-family: 'Inter', sans-serif;
+    /* Rainbow gradient keyframes */
+    @keyframes rainbow {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
     }
     
-    /* Primary buttons */
+    /* Headers with rainbow gradient */
+    h1, h2, h3, .st-emotion-cache-10trblm {
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 400% 400%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: rainbow 3s ease infinite;
+        font-weight: 700 !important;
+        font-family: 'Inter', sans-serif;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+    
+    /* Primary buttons with rainbow gradient */
     .stButton > button {
-        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
-        color: white !important;
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) !important;
+        background-size: 400% 400% !important;
+        animation: rainbow 3s ease infinite !important;
+        color: #000000 !important;
         border: none !important;
-        border-radius: 8px !important;
+        border-radius: 12px !important;
         padding: 0.75rem 1.5rem !important;
-        font-weight: 500 !important;
+        font-weight: 700 !important;
         font-family: 'Inter', sans-serif !important;
-        box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3) !important;
-        transition: all 0.2s ease !important;
+        box-shadow: 0 8px 32px rgba(255, 255, 255, 0.3) !important;
+        transition: all 0.3s ease !important;
+        text-shadow: none !important;
     }
     .stButton > button:hover {
-        background: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%) !important;
-        transform: translateY(-1px) !important;
-        box-shadow: 0 6px 10px -1px rgba(59, 130, 246, 0.4) !important;
+        transform: translateY(-2px) scale(1.05) !important;
+        box-shadow: 0 12px 40px rgba(255, 255, 255, 0.4) !important;
+        filter: brightness(1.2) !important;
     }
     
-    /* Download button specific styling */
+    /* Download button with rainbow gradient */
     .stDownloadButton > button {
-        background: linear-gradient(135deg, #10b981 0%, #047857 100%) !important;
-        color: white !important;
-        border-radius: 8px !important;
-        font-weight: 500 !important;
-        box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.3) !important;
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) !important;
+        background-size: 400% 400% !important;
+        animation: rainbow 3s ease infinite !important;
+        color: #000000 !important;
+        border-radius: 12px !important;
+        font-weight: 700 !important;
+        box-shadow: 0 8px 32px rgba(255, 255, 255, 0.3) !important;
     }
     .stDownloadButton > button:hover {
-        background: linear-gradient(135deg, #059669 0%, #065f46 100%) !important;
-        transform: translateY(-1px) !important;
-        box-shadow: 0 6px 10px -1px rgba(16, 185, 129, 0.4) !important;
+        transform: translateY(-2px) scale(1.05) !important;
+        box-shadow: 0 12px 40px rgba(255, 255, 255, 0.4) !important;
+        filter: brightness(1.2) !important;
     }
     
-    /* Success messages */
+    /* Success messages with rainbow gradient */
     .stSuccess {
-        background: linear-gradient(135deg, #10b981 0%, #047857 100%) !important;
-        color: white !important;
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) !important;
+        background-size: 400% 400% !important;
+        animation: rainbow 3s ease infinite !important;
+        color: #000000 !important;
         padding: 1rem 1.5rem !important;
-        border-radius: 8px !important;
+        border-radius: 12px !important;
         border: none !important;
-        box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.2) !important;
+        box-shadow: 0 8px 32px rgba(255, 255, 255, 0.3) !important;
+        font-weight: 600 !important;
     }
     
-    /* Error messages */
+    /* Error messages with red gradient */
     .stError {
-        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
-        color: white !important;
+        background: linear-gradient(45deg, #ff1744, #ff5722, #ff9800, #ff1744) !important;
+        background-size: 400% 400% !important;
+        animation: rainbow 3s ease infinite !important;
+        color: #ffffff !important;
         padding: 1rem 1.5rem !important;
-        border-radius: 8px !important;
+        border-radius: 12px !important;
         border: none !important;
+        box-shadow: 0 8px 32px rgba(255, 23, 68, 0.4) !important;
+        font-weight: 600 !important;
     }
     
-    /* Warning messages */
+    /* Warning messages with orange gradient */
     .stWarning {
-        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
-        color: white !important;
+        background: linear-gradient(45deg, #ff9800, #ff5722, #ffeb3b, #ff9800) !important;
+        background-size: 400% 400% !important;
+        animation: rainbow 3s ease infinite !important;
+        color: #000000 !important;
         padding: 1rem 1.5rem !important;
-        border-radius: 8px !important;
+        border-radius: 12px !important;
         border: none !important;
+        box-shadow: 0 8px 32px rgba(255, 152, 0, 0.4) !important;
+        font-weight: 600 !important;
     }
     
-    /* Info messages */
+    /* Info messages with blue gradient */
     .stInfo {
-        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
-        color: white !important;
+        background: linear-gradient(45deg, #2196f3, #03a9f4, #00bcd4, #2196f3) !important;
+        background-size: 400% 400% !important;
+        animation: rainbow 3s ease infinite !important;
+        color: #ffffff !important;
         padding: 1rem 1.5rem !important;
-        border-radius: 8px !important;
+        border-radius: 12px !important;
         border: none !important;
+        box-shadow: 0 8px 32px rgba(33, 150, 243, 0.4) !important;
+        font-weight: 600 !important;
     }
     
     /* Sidebar */
     section[data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-        border-right: 1px solid #e2e8f0;
+        background: linear-gradient(180deg, #1a1a1a 0%, #000000 100%);
+        border-right: 2px solid #333333;
     }
     
-    /* Input fields */
+    /* Input fields with neon glow */
     .stTextInput > div > div > input {
-        border: 2px solid #e2e8f0 !important;
-        border-radius: 8px !important;
+        background: rgba(20, 20, 20, 0.8) !important;
+        border: 2px solid #333333 !important;
+        border-radius: 12px !important;
         padding: 0.75rem !important;
         font-family: 'Inter', sans-serif !important;
-        transition: all 0.2s ease !important;
+        color: #ffffff !important;
+        transition: all 0.3s ease !important;
     }
     .stTextInput > div > div > input:focus {
-        border-color: #3b82f6 !important;
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+        border: 2px solid transparent !important;
+        background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
     }
     
     /* Select boxes */
     .stSelectbox > div > div {
-        border: 2px solid #e2e8f0 !important;
-        border-radius: 8px !important;
-        transition: all 0.2s ease !important;
+        background: rgba(20, 20, 20, 0.8) !important;
+        border: 2px solid #333333 !important;
+        border-radius: 12px !important;
+        color: #ffffff !important;
+        transition: all 0.3s ease !important;
     }
     .stSelectbox > div > div:focus-within {
-        border-color: #3b82f6 !important;
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+        border: 2px solid transparent !important;
+        background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
     }
     
     /* Multi-select */
     .stMultiSelect > div > div {
-        border: 2px solid #e2e8f0 !important;
-        border-radius: 8px !important;
+        background: rgba(20, 20, 20, 0.8) !important;
+        border: 2px solid #333333 !important;
+        border-radius: 12px !important;
+        color: #ffffff !important;
     }
     .stMultiSelect > div > div:focus-within {
-        border-color: #3b82f6 !important;
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+        border: 2px solid transparent !important;
+        background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
     }
     
     /* Date input */
     .stDateInput > div > div > input {
-        border: 2px solid #e2e8f0 !important;
-        border-radius: 8px !important;
+        background: rgba(20, 20, 20, 0.8) !important;
+        border: 2px solid #333333 !important;
+        border-radius: 12px !important;
         padding: 0.75rem !important;
+        color: #ffffff !important;
     }
     .stDateInput > div > div > input:focus {
-        border-color: #3b82f6 !important;
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+        border: 2px solid transparent !important;
+        background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
     }
     
     /* Time input */
     .stTimeInput > div > div > input {
-        border: 2px solid #e2e8f0 !important;
-        border-radius: 8px !important;
+        background: rgba(20, 20, 20, 0.8) !important;
+        border: 2px solid #333333 !important;
+        border-radius: 12px !important;
         padding: 0.75rem !important;
+        color: #ffffff !important;
     }
     .stTimeInput > div > div > input:focus {
-        border-color: #3b82f6 !important;
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+        border: 2px solid transparent !important;
+        background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
     }
     
     /* Text area */
     .stTextArea > div > div > textarea {
-        border: 2px solid #e2e8f0 !important;
-        border-radius: 8px !important;
+        background: rgba(20, 20, 20, 0.8) !important;
+        border: 2px solid #333333 !important;
+        border-radius: 12px !important;
         padding: 0.75rem !important;
         font-family: 'Inter', sans-serif !important;
+        color: #ffffff !important;
     }
     .stTextArea > div > div > textarea:focus {
-        border-color: #3b82f6 !important;
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+        border: 2px solid transparent !important;
+        background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
     }
     
-    /* Checkboxes */
+    /* Checkboxes with rainbow labels */
     .stCheckbox > label {
         font-family: 'Inter', sans-serif !important;
-        color: #374151 !important;
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 400% 400%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: rainbow 4s ease infinite;
+        font-weight: 500 !important;
     }
     
-    /* Radio buttons */
+    /* Radio buttons with rainbow labels */
     .stRadio > label {
         font-family: 'Inter', sans-serif !important;
-        color: #374151 !important;
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 400% 400%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: rainbow 4s ease infinite;
+        font-weight: 500 !important;
     }
     
-    /* Cards/containers */
+    /* Cards/containers with dark glass effect */
     div.stMarkdown {
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(10px);
+        background: rgba(30, 30, 30, 0.7);
+        backdrop-filter: blur(20px);
         padding: 1.5rem;
-        border-radius: 12px;
-        border: 1px solid rgba(226, 232, 240, 0.5);
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
     
-    /* Expander */
+    /* Expander with dark theme */
     .streamlit-expanderHeader {
-        background: rgba(255, 255, 255, 0.9) !important;
-        border-radius: 8px !important;
-        border: 1px solid #e2e8f0 !important;
+        background: rgba(30, 30, 30, 0.8) !important;
+        border-radius: 12px !important;
+        border: 1px solid #333333 !important;
         font-family: 'Inter', sans-serif !important;
+        color: #ffffff !important;
     }
     
-    /* Tabs */
+    /* Tabs with rainbow active state */
     .stTabs [data-baseweb="tab-list"] {
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 8px;
-        border: 1px solid #e2e8f0;
+        background: rgba(30, 30, 30, 0.8);
+        border-radius: 12px;
+        border: 1px solid #333333;
         padding: 0.25rem;
     }
     .stTabs [data-baseweb="tab"] {
-        border-radius: 6px !important;
+        border-radius: 8px !important;
         font-family: 'Inter', sans-serif !important;
         font-weight: 500 !important;
-        color: #6b7280 !important;
+        color: #cccccc !important;
     }
     .stTabs [aria-selected="true"] {
-        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
-        color: white !important;
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) !important;
+        background-size: 400% 400% !important;
+        animation: rainbow 3s ease infinite !important;
+        color: #000000 !important;
+        font-weight: 700 !important;
     }
     
-    /* Links */
+    /* Links with rainbow effect */
     a {
-        color: #3b82f6 !important;
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 400% 400%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: rainbow 3s ease infinite;
         text-decoration: none !important;
-        font-weight: 500 !important;
+        font-weight: 600 !important;
     }
     a:hover {
-        color: #1d4ed8 !important;
+        filter: brightness(1.3) !important;
         text-decoration: underline !important;
     }
 
-    /* Custom header banner - Modern Nerdy style */
+    /* Custom header banner - Epic rainbow style */
     .header-banner {
-        background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 20%, #6366f1 80%, #8b5cf6 100%);
-        padding: 2rem;
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 400% 400%;
+        animation: rainbow 3s ease infinite;
+        padding: 2.5rem;
         display: flex;
         align-items: center;
         margin-bottom: 2rem;
-        border-radius: 16px;
-        box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
         position: relative;
         overflow: hidden;
     }
@@ -257,61 +331,65 @@ st.markdown("""
         left: 0;
         right: 0;
         bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-        pointer-events: none;
+        background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+        transform: translateX(-100%);
+        animation: shine 2s ease-in-out infinite;
+    }
+    @keyframes shine {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
     }
     .header-banner .logo-text {
         display: flex;
         align-items: center;
-        gap: 1.5rem;
+        gap: 2rem;
         position: relative;
         z-index: 1;
     }
     .header-banner .logo {
         font-family: 'Inter', sans-serif;
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: white;
+        font-size: 3rem;
+        font-weight: 900;
+        color: #000000;
         text-decoration: none;
-        background: linear-gradient(45deg, #ffffff, #e0e7ff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
     .header-banner .title {
-        color: white !important;
+        color: #000000 !important;
         margin: 0;
         padding: 0;
-        font-size: 2rem;
-        font-weight: 600;
+        font-size: 2.5rem;
+        font-weight: 800;
         font-family: 'Inter', sans-serif;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
 
-    /* Form styling */
+    /* Form styling with dark theme */
     .stForm {
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(10px);
-        border-radius: 12px;
-        border: 1px solid rgba(226, 232, 240, 0.5);
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        padding: 1.5rem;
+        background: rgba(30, 30, 30, 0.8);
+        backdrop-filter: blur(20px);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        padding: 2rem;
     }
 
-    /* Temporary success message styling - Modern */
+    /* Temporary success message with rainbow */
     .temp-success-message {
-        background: linear-gradient(135deg, #10b981 0%, #047857 100%);
-        color: white;
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 400% 400%;
+        animation: rainbow 3s ease infinite;
+        color: #000000;
         padding: 1rem 1.5rem;
-        border-radius: 8px;
+        border-radius: 12px;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.3);
+        box-shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
         font-family: 'Inter', sans-serif;
-        font-weight: 500;
+        font-weight: 700;
     }
     .temp-success-message.fade-out {
         background: transparent;
-        color: #6b7280;
+        color: #666666;
     }
     
     /* Column spacing */
@@ -319,21 +397,39 @@ st.markdown("""
         gap: 1rem;
     }
     
+    /* Labels with rainbow effect */
+    label {
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) !important;
+        background-size: 400% 400% !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+        animation: rainbow 4s ease infinite !important;
+        font-weight: 600 !important;
+    }
+    
+    /* Paragraphs and regular text */
+    p, div, span {
+        color: #ffffff !important;
+    }
+    
     /* Custom scrollbar */
     ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
+        width: 12px;
+        height: 12px;
     }
     ::-webkit-scrollbar-track {
-        background: #f1f5f9;
-        border-radius: 4px;
+        background: #1a1a1a;
+        border-radius: 6px;
     }
     ::-webkit-scrollbar-thumb {
-        background: linear-gradient(135deg, #cbd5e1, #94a3b8);
-        border-radius: 4px;
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 400% 400%;
+        animation: rainbow 3s ease infinite;
+        border-radius: 6px;
     }
     ::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(135deg, #94a3b8, #64748b);
+        filter: brightness(1.2);
     }
     </style>
 """, unsafe_allow_html=True)
