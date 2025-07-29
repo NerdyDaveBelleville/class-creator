@@ -250,6 +250,28 @@ st.markdown("""
         color: #ffffff !important;
     }
     
+    /* Course code dropdown options - black text on white background */
+    .stMultiSelect div[role="listbox"] {
+        background: #ffffff !important;
+    }
+    .stMultiSelect div[role="option"] {
+        background: #ffffff !important;
+        color: #000000 !important;
+    }
+    .stMultiSelect div[role="option"]:hover {
+        background: #f0f0f0 !important;
+        color: #000000 !important;
+    }
+    
+    /* Course code multiselect dropdown styling */
+    .stMultiSelect div[data-baseweb="select"] > div > div {
+        background: #ffffff !important;
+    }
+    .stMultiSelect div[data-baseweb="select"] div[role="listbox"] div {
+        background: #ffffff !important;
+        color: #000000 !important;
+    }
+    
     /* Multi-select selected items */
     .stMultiSelect span {
         background: #555555 !important;
@@ -290,6 +312,28 @@ st.markdown("""
         border: 2px solid transparent !important;
         background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) border-box !important;
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
+    }
+    
+    /* Time dropdown options - black text */
+    .stTimeInput div[role="listbox"] {
+        background: #ffffff !important;
+    }
+    .stTimeInput div[role="option"] {
+        background: #ffffff !important;
+        color: #000000 !important;
+    }
+    .stTimeInput div[role="option"]:hover {
+        background: #f0f0f0 !important;
+        color: #000000 !important;
+    }
+    
+    /* Time picker dropdown styling */
+    .stTimeInput div[data-baseweb="select"] > div > div {
+        background: #ffffff !important;
+    }
+    .stTimeInput div[data-baseweb="select"] div[role="listbox"] div {
+        background: #ffffff !important;
+        color: #000000 !important;
     }
     
     /* Text area */
