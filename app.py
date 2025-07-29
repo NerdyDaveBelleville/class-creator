@@ -438,6 +438,62 @@ st.markdown("""
         color: #ffffff !important;
     }
     
+    /* Target the actual time picker dropdown popup */
+    div[data-baseweb="popover-content"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Time picker popup container */
+    .stTimeInput div[data-baseweb="popover-content"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stTimeInput div[data-baseweb="popover-content"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Time picker list items */
+    .stTimeInput ul {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stTimeInput ul li {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stTimeInput ul li:hover {
+        background: #5a5a5a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Target Base Web components directly */
+    [data-baseweb="menu"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    [data-baseweb="menu"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Time picker specific menu targeting */
+    .stTimeInput [data-baseweb="menu"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stTimeInput [data-baseweb="menu"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Dropdown overlay */
+    .stTimeInput div[data-baseweb="popover"] div[data-baseweb="popover-content"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
     /* Text area */
     .stTextArea > div > div > textarea {
         background: rgba(20, 20, 20, 0.8) !important;
