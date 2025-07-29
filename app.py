@@ -396,6 +396,48 @@ st.markdown("""
         color: #000000 !important;
     }
     
+    /* More comprehensive time picker targeting */
+    .stTimeInput div[data-baseweb="popover"] * {
+        color: #000000 !important;
+    }
+    .stTimeInput div[data-baseweb="menu"] * {
+        color: #000000 !important;
+        background: #f0f0f0 !important;
+    }
+    .stTimeInput [role="presentation"] {
+        background: #f0f0f0 !important;
+    }
+    .stTimeInput [role="presentation"] * {
+        color: #000000 !important;
+        background: #f0f0f0 !important;
+    }
+    
+    /* Target all text in time picker */
+    .stTimeInput div[data-baseweb="select"] span {
+        color: #000000 !important;
+    }
+    .stTimeInput div[data-baseweb="select"] div span {
+        color: #000000 !important;
+    }
+    
+    /* Streamlit specific time picker classes */
+    .stTimeInput [class*="option"] {
+        background: #f0f0f0 !important;
+        color: #000000 !important;
+    }
+    .stTimeInput [class*="option"]:hover {
+        background: #e0e0e0 !important;
+        color: #000000 !important;
+    }
+    
+    /* Universal text override for time picker */
+    .stTimeInput div[role="listbox"] * {
+        color: #000000 !important;
+    }
+    .stTimeInput div[role="option"] * {
+        color: #000000 !important;
+    }
+    
     /* Text area */
     .stTextArea > div > div > textarea {
         background: rgba(20, 20, 20, 0.8) !important;
