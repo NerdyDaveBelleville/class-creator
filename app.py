@@ -250,26 +250,44 @@ st.markdown("""
         color: #ffffff !important;
     }
     
-    /* Course code dropdown options - black text on white background */
+    /* Course code dropdown options - black background like date input */
     .stMultiSelect div[role="listbox"] {
-        background: #ffffff !important;
+        background: #000000 !important;
+        border: 2px solid #333333 !important;
     }
     .stMultiSelect div[role="option"] {
-        background: #ffffff !important;
-        color: #000000 !important;
+        background: #000000 !important;
+        color: #ffffff !important;
     }
     .stMultiSelect div[role="option"]:hover {
-        background: #f0f0f0 !important;
-        color: #000000 !important;
+        background: #333333 !important;
+        color: #ffffff !important;
     }
     
     /* Course code multiselect dropdown styling */
     .stMultiSelect div[data-baseweb="select"] > div > div {
-        background: #ffffff !important;
+        background: #000000 !important;
     }
     .stMultiSelect div[data-baseweb="select"] div[role="listbox"] div {
-        background: #ffffff !important;
-        color: #000000 !important;
+        background: #000000 !important;
+        color: #ffffff !important;
+    }
+    
+    /* Additional course code dropdown targeting */
+    .stMultiSelect div[data-baseweb="popover"] {
+        background: #000000 !important;
+    }
+    .stMultiSelect div[data-baseweb="popover"] > div {
+        background: #000000 !important;
+        border: 2px solid #333333 !important;
+    }
+    .stMultiSelect li {
+        background: #000000 !important;
+        color: #ffffff !important;
+    }
+    .stMultiSelect li:hover {
+        background: #333333 !important;
+        color: #ffffff !important;
     }
     
     /* Multi-select selected items */
@@ -314,26 +332,44 @@ st.markdown("""
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
     }
     
-    /* Time dropdown options - black text */
+    /* Time dropdown options - black background like date input */
     .stTimeInput div[role="listbox"] {
-        background: #ffffff !important;
+        background: #000000 !important;
+        border: 2px solid #333333 !important;
     }
     .stTimeInput div[role="option"] {
-        background: #ffffff !important;
-        color: #000000 !important;
+        background: #000000 !important;
+        color: #ffffff !important;
     }
     .stTimeInput div[role="option"]:hover {
-        background: #f0f0f0 !important;
-        color: #000000 !important;
+        background: #333333 !important;
+        color: #ffffff !important;
     }
     
     /* Time picker dropdown styling */
     .stTimeInput div[data-baseweb="select"] > div > div {
-        background: #ffffff !important;
+        background: #000000 !important;
     }
     .stTimeInput div[data-baseweb="select"] div[role="listbox"] div {
-        background: #ffffff !important;
-        color: #000000 !important;
+        background: #000000 !important;
+        color: #ffffff !important;
+    }
+    
+    /* Additional time dropdown targeting */
+    .stTimeInput div[data-baseweb="popover"] {
+        background: #000000 !important;
+    }
+    .stTimeInput div[data-baseweb="popover"] > div {
+        background: #000000 !important;
+        border: 2px solid #333333 !important;
+    }
+    .stTimeInput li {
+        background: #000000 !important;
+        color: #ffffff !important;
+    }
+    .stTimeInput li:hover {
+        background: #333333 !important;
+        color: #ffffff !important;
     }
     
     /* Text area */
