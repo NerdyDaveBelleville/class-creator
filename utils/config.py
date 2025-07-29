@@ -42,8 +42,8 @@ CONFIG = {
             'role': 'admin'
         },
         'user': {
-            'password': 'user123',
-            'role': 'user'
+            'password': 'b3N3rdY!',
+            'role': 'requester'
         }
     },
     'defaults': {
