@@ -1141,6 +1141,90 @@ st.markdown("""
         background: #4a4a4a !important;
         color: #ffffff !important;
     }
+    
+    /* FINAL BOSS BATTLE - Alternative approach */
+    
+    /* Target Streamlit's specific component classes */
+    .stSelectbox div[data-baseweb] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stSelectbox div[data-baseweb] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Force repaint with CSS filters */
+    div[data-baseweb="popover-content"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+        filter: brightness(1) !important;
+        transform: translateZ(0) !important;
+    }
+    
+    /* Target React portals (often used for dropdowns) */
+    .ReactModal__Content {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .ReactModal__Content * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Target by component hierarchy */
+    .stApp div[data-baseweb="popover-content"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    .stApp div[data-baseweb="popover-content"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* CSS animation to force style application */
+    @keyframes forceStyle {
+        0% { background: #4a4a4a !important; }
+        100% { background: #4a4a4a !important; }
+    }
+    
+    div[data-baseweb="popover-content"] {
+        animation: forceStyle 0.1s !important;
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Target the Select component container */
+    .stMultiSelect > div > div {
+        --background: #4a4a4a !important;
+        --color: #ffffff !important;
+    }
+    
+    /* Use CSS custom properties override */
+    :root {
+        --dropdown-background: #4a4a4a !important;
+        --dropdown-text: #ffffff !important;
+    }
+    
+    /* Apply to all potential dropdown containers */
+    div[data-baseweb="popover-content"],
+    div[data-baseweb="menu"],
+    div[role="listbox"],
+    ul[role="listbox"] {
+        background: var(--dropdown-background, #4a4a4a) !important;
+        color: var(--dropdown-text, #ffffff) !important;
+        background-color: #4a4a4a !important;
+    }
+    
+    /* Final desperate measure - target by visibility */
+    div[style*="visibility: visible"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    div[style*="visibility: visible"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
     </style>
 """, unsafe_allow_html=True)
 
