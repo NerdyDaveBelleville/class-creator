@@ -1225,6 +1225,77 @@ st.markdown("""
         background: #4a4a4a !important;
         color: #ffffff !important;
     }
+    
+    /* NUCLEAR FONT OPTION - Make text BLACK on white background */
+    
+    /* Target Select Course Code(s) dropdown text specifically */
+    .stMultiSelect div[data-baseweb="popover-content"] *,
+    .stMultiSelect div[data-baseweb="menu"] *,
+    .stMultiSelect div[role="listbox"] *,
+    .stMultiSelect div[role="option"] *,
+    .stMultiSelect ul[role="listbox"] *,
+    .stMultiSelect li *,
+    .stMultiSelect div[data-baseweb="select"] div[role="listbox"] *,
+    .stMultiSelect div[data-baseweb="popover"] *,
+    body div[data-baseweb="popover-content"] *,
+    body div[data-baseweb="menu"] *,
+    body ul[role="listbox"] *,
+    body li *,
+    div[style*="position: fixed"] *,
+    div[style*="position: absolute"] *,
+    div[style*="z-index"] * {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+        text-shadow: none !important;
+    }
+    
+    /* Target ALL text in dropdown popups */
+    [data-baseweb="popover-content"] span,
+    [data-baseweb="popover-content"] div,
+    [data-baseweb="popover-content"] p,
+    [data-baseweb="menu"] span,
+    [data-baseweb="menu"] div,
+    [data-baseweb="menu"] p,
+    [role="listbox"] span,
+    [role="listbox"] div,
+    [role="option"] span,
+    [role="option"] div {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+        text-shadow: none !important;
+    }
+    
+    /* Nuclear text override - target everything in dropdowns */
+    div[data-baseweb="popover-content"] *,
+    div[data-baseweb="menu"] *,
+    ul[role="listbox"] *,
+    div[role="presentation"] * {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+        font-weight: 600 !important;
+        text-shadow: none !important;
+    }
+    
+    /* Force black text on ALL potential dropdown containers */
+    * {
+        --text-color: #000000 !important;
+    }
+    
+    [data-baseweb="popover-content"],
+    [data-baseweb="menu"],
+    [role="listbox"],
+    [role="option"] {
+        color: var(--text-color) !important;
+        -webkit-text-fill-color: var(--text-color) !important;
+    }
+    
+    [data-baseweb="popover-content"] *,
+    [data-baseweb="menu"] *,
+    [role="listbox"] *,
+    [role="option"] * {
+        color: var(--text-color) !important;
+        -webkit-text-fill-color: var(--text-color) !important;
+    }
     </style>
 """, unsafe_allow_html=True)
 
