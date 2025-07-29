@@ -17,123 +17,323 @@ st.set_page_config(
     layout="wide"
 )
 
-# Custom CSS with Nerdy.com's color scheme
+# Custom CSS with Nerdy.com's modern color scheme
 st.markdown("""
     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
     /* Main background and text colors */
     .stApp {
-        background-color: #FFFFFF;
-        color: #333333;
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #1e293b;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
     
     /* Headers */
     h1, h2, h3, .st-emotion-cache-10trblm {
-        color: #2E5B3E !important;
+        color: #1e40af !important;
         font-weight: 600;
+        font-family: 'Inter', sans-serif;
     }
     
-    /* Buttons */
+    /* Primary buttons */
     .stButton > button {
-        background-color: #2E5B3E !important;
+        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
         color: white !important;
         border: none !important;
-        border-radius: 4px !important;
-        padding: 0.5rem 1rem !important;
+        border-radius: 8px !important;
+        padding: 0.75rem 1.5rem !important;
+        font-weight: 500 !important;
+        font-family: 'Inter', sans-serif !important;
+        box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3) !important;
+        transition: all 0.2s ease !important;
     }
     .stButton > button:hover {
-        background-color: #3E7B4E !important;
+        background: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%) !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 0 6px 10px -1px rgba(59, 130, 246, 0.4) !important;
     }
     
     /* Download button specific styling */
     .stDownloadButton > button {
-        background-color: #FF4B4B !important;
+        background: linear-gradient(135deg, #10b981 0%, #047857 100%) !important;
         color: white !important;
+        border-radius: 8px !important;
+        font-weight: 500 !important;
+        box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.3) !important;
     }
     .stDownloadButton > button:hover {
-        background-color: #FF6B6B !important;
+        background: linear-gradient(135deg, #059669 0%, #065f46 100%) !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 0 6px 10px -1px rgba(16, 185, 129, 0.4) !important;
     }
     
-    /* Success messages to match download button */
+    /* Success messages */
     .stSuccess {
-        background-color: #FF4B4B !important;
+        background: linear-gradient(135deg, #10b981 0%, #047857 100%) !important;
         color: white !important;
-        padding: 0.5rem 1rem !important;
-        border-radius: 4px !important;
+        padding: 1rem 1.5rem !important;
+        border-radius: 8px !important;
+        border: none !important;
+        box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.2) !important;
+    }
+    
+    /* Error messages */
+    .stError {
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+        color: white !important;
+        padding: 1rem 1.5rem !important;
+        border-radius: 8px !important;
+        border: none !important;
+    }
+    
+    /* Warning messages */
+    .stWarning {
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+        color: white !important;
+        padding: 1rem 1.5rem !important;
+        border-radius: 8px !important;
+        border: none !important;
+    }
+    
+    /* Info messages */
+    .stInfo {
+        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+        color: white !important;
+        padding: 1rem 1.5rem !important;
+        border-radius: 8px !important;
+        border: none !important;
     }
     
     /* Sidebar */
     section[data-testid="stSidebar"] {
-        background-color: #F5F5F5;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        border-right: 1px solid #e2e8f0;
     }
     
     /* Input fields */
     .stTextInput > div > div > input {
-        border-color: #2E5B3E;
+        border: 2px solid #e2e8f0 !important;
+        border-radius: 8px !important;
+        padding: 0.75rem !important;
+        font-family: 'Inter', sans-serif !important;
+        transition: all 0.2s ease !important;
     }
     .stTextInput > div > div > input:focus {
-        border-color: #3E7B4E;
+        border-color: #3b82f6 !important;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
     }
     
     /* Select boxes */
     .stSelectbox > div > div {
-        border-color: #2E5B3E;
+        border: 2px solid #e2e8f0 !important;
+        border-radius: 8px !important;
+        transition: all 0.2s ease !important;
+    }
+    .stSelectbox > div > div:focus-within {
+        border-color: #3b82f6 !important;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+    }
+    
+    /* Multi-select */
+    .stMultiSelect > div > div {
+        border: 2px solid #e2e8f0 !important;
+        border-radius: 8px !important;
+    }
+    .stMultiSelect > div > div:focus-within {
+        border-color: #3b82f6 !important;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+    }
+    
+    /* Date input */
+    .stDateInput > div > div > input {
+        border: 2px solid #e2e8f0 !important;
+        border-radius: 8px !important;
+        padding: 0.75rem !important;
+    }
+    .stDateInput > div > div > input:focus {
+        border-color: #3b82f6 !important;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+    }
+    
+    /* Time input */
+    .stTimeInput > div > div > input {
+        border: 2px solid #e2e8f0 !important;
+        border-radius: 8px !important;
+        padding: 0.75rem !important;
+    }
+    .stTimeInput > div > div > input:focus {
+        border-color: #3b82f6 !important;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+    }
+    
+    /* Text area */
+    .stTextArea > div > div > textarea {
+        border: 2px solid #e2e8f0 !important;
+        border-radius: 8px !important;
+        padding: 0.75rem !important;
+        font-family: 'Inter', sans-serif !important;
+    }
+    .stTextArea > div > div > textarea:focus {
+        border-color: #3b82f6 !important;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+    }
+    
+    /* Checkboxes */
+    .stCheckbox > label {
+        font-family: 'Inter', sans-serif !important;
+        color: #374151 !important;
+    }
+    
+    /* Radio buttons */
+    .stRadio > label {
+        font-family: 'Inter', sans-serif !important;
+        color: #374151 !important;
     }
     
     /* Cards/containers */
     div.stMarkdown {
-        background-color: #FFFFFF;
-        padding: 1rem;
-        border-radius: 4px;
-        border: 1px solid #F5F5F5;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.5);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Expander */
+    .streamlit-expanderHeader {
+        background: rgba(255, 255, 255, 0.9) !important;
+        border-radius: 8px !important;
+        border: 1px solid #e2e8f0 !important;
+        font-family: 'Inter', sans-serif !important;
+    }
+    
+    /* Tabs */
+    .stTabs [data-baseweb="tab-list"] {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+        padding: 0.25rem;
+    }
+    .stTabs [data-baseweb="tab"] {
+        border-radius: 6px !important;
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 500 !important;
+        color: #6b7280 !important;
+    }
+    .stTabs [aria-selected="true"] {
+        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+        color: white !important;
     }
     
     /* Links */
     a {
-        color: #2E5B3E !important;
+        color: #3b82f6 !important;
+        text-decoration: none !important;
+        font-weight: 500 !important;
     }
     a:hover {
-        color: #3E7B4E !important;
+        color: #1d4ed8 !important;
+        text-decoration: underline !important;
     }
 
-    /* Custom header banner */
+    /* Custom header banner - Modern Nerdy style */
     .header-banner {
-        background-color: #2E5B3E;
-        padding: 1.5rem;
+        background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 20%, #6366f1 80%, #8b5cf6 100%);
+        padding: 2rem;
         display: flex;
         align-items: center;
         margin-bottom: 2rem;
-        border-radius: 4px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
+        position: relative;
+        overflow: hidden;
+    }
+    .header-banner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        pointer-events: none;
     }
     .header-banner .logo-text {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 1.5rem;
+        position: relative;
+        z-index: 1;
     }
     .header-banner .logo {
-        font-family: 'Arial', sans-serif;
-        font-size: 2rem;
-        font-weight: bold;
+        font-family: 'Inter', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
         color: white;
         text-decoration: none;
+        background: linear-gradient(45deg, #ffffff, #e0e7ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
     .header-banner .title {
         color: white !important;
         margin: 0;
         padding: 0;
-        font-size: 1.75rem;
+        font-size: 2rem;
+        font-weight: 600;
+        font-family: 'Inter', sans-serif;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    /* Temporary success message styling */
+    /* Form styling */
+    .stForm {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        border: 1px solid rgba(226, 232, 240, 0.5);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+    }
+
+    /* Temporary success message styling - Modern */
     .temp-success-message {
-        background-color: #FF4B4B;
+        background: linear-gradient(135deg, #10b981 0%, #047857 100%);
         color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
         transition: all 0.3s ease;
+        box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.3);
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
     }
     .temp-success-message.fade-out {
-        background-color: transparent;
-        color: #808495;
+        background: transparent;
+        color: #6b7280;
+    }
+    
+    /* Column spacing */
+    .row-widget.stHorizontal {
+        gap: 1rem;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #cbd5e1, #94a3b8);
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #94a3b8, #64748b);
     }
     </style>
 """, unsafe_allow_html=True)
