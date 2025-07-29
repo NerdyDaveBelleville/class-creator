@@ -254,6 +254,29 @@ st.markdown("""
         font-weight: 500 !important;
     }
     
+    /* Specific radio button styling for forms and manage courses */
+    .stRadio label, .stRadio > div > label, .stRadio div label {
+        color: #ff3333 !important;
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 600 !important;
+        background: none !important;
+        -webkit-text-fill-color: #ff3333 !important;
+    }
+    
+    /* Radio button options text */
+    .stRadio > div > div > div > label {
+        color: #ff3333 !important;
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 600 !important;
+        background: none !important;
+        -webkit-text-fill-color: #ff3333 !important;
+    }
+    
+    /* Radio button container labels */
+    .stRadio > div > label > div {
+        color: #ff3333 !important;
+    }
+    
     /* Cards/containers with dark glass effect */
     div.stMarkdown {
         background: rgba(30, 30, 30, 0.7);
