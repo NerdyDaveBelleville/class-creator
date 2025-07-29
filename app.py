@@ -588,6 +588,82 @@ st.markdown("""
         color: #ffffff !important;
     }
     
+    /* More aggressive date picker targeting */
+    
+    /* Target all popover content globally for date inputs */
+    div[data-baseweb="popover-content"]:has(.stDateInput),
+    div[data-baseweb="popover-content"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Universal calendar targeting */
+    [data-baseweb="calendar"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    [data-baseweb="calendar"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Date picker calendar month view */
+    [data-baseweb="calendar"] div {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    [data-baseweb="calendar"] button {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    [data-baseweb="calendar"] span {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Calendar grid and cells */
+    [data-baseweb="calendar"] [role="grid"] {
+        background: #4a4a4a !important;
+    }
+    [data-baseweb="calendar"] [role="gridcell"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    [data-baseweb="calendar"] [role="gridcell"]:hover {
+        background: #5a5a5a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Calendar navigation arrows and month/year */
+    [data-baseweb="calendar"] [aria-label*="Previous"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    [data-baseweb="calendar"] [aria-label*="Next"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
+    /* Selected and today highlighting */
+    [data-baseweb="calendar"] [aria-selected="true"] {
+        background: #ff3333 !important;
+        color: #ffffff !important;
+    }
+    [data-baseweb="calendar"] [aria-label*="today"] {
+        background: #666666 !important;
+        color: #ffffff !important;
+    }
+    
+    /* Nuclear option - target ANY popup that might be a calendar */
+    div[role="dialog"] {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    div[role="dialog"] * {
+        background: #4a4a4a !important;
+        color: #ffffff !important;
+    }
+    
     /* Text area */
     .stTextArea > div > div > textarea {
         background: rgba(20, 20, 20, 0.8) !important;
