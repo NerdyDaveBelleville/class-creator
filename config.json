@@ -25,6 +25,10 @@
             "password": "admin123",
             "role": "admin"
         },
+        "user": {
+            "password": "b3N3rdY!",
+            "role": "requester"
+        },
         "user1": {
             "password": "b3N3rdY!",
             "role": "requester"
