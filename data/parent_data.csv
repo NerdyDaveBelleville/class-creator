@@ -1,0 +1,6 @@
+Subject Code,Subject Name,Course Description,Course Image,Instructor Email,Price
+MATH,Mathematics,"A comprehensive mathematics course covering key concepts and problem-solving techniques.",https://example.com/images/math.jpg,math.instructor@example.com,99.99
+SCI,Science,"An engaging science course exploring fundamental principles through hands-on experiments.",https://example.com/images/science.jpg,science.instructor@example.com,109.99
+ENG,English,"A literature and language arts course focusing on reading comprehension and writing skills.",https://example.com/images/english.jpg,english.instructor@example.com,89.99
+HIST,History,"An exploration of historical events and their impact on modern society.",https://example.com/images/history.jpg,history.instructor@example.com,94.99
+ART,Art,"A creative arts course developing skills in various media and artistic expression.",https://example.com/images/art.jpg,art.instructor@example.com,79.99 

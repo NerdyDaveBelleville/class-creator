@@ -1,0 +1,56 @@
+{
+    "hive_api_key": "pSB87a8Ea8tKN3aCJOqsUyPojkyNrwOk",
+    "callback_url": "https://webhook.site/4c2126d5-3c31-4449-b37f-940b30297b26",
+    "hive_audio_api_key": "b7cN05S9jsDbQi6SnenU5pGv0FQodFfn",
+    "app": {
+        "title": "Live Class Creator",
+        "icon": "📚",
+        "layout": "wide"
+    },
+    "data": {
+        "spreadsheet_path": "reference_data.xlsx",
+        "reference_sheets": {
+            "parent_data": "Parent Data",
+            "subject_key": "Subject Key",
+            "grade_lookup": "Grade Lookup"
+        },
+        "output_sheet": "Bulk Uploader (Direct Responses)"
+    },
+    "paths": {
+        "data_dir": "data",
+        "exports_dir": "exports"
+    },
+    "users": {
+        "admin": {
+            "password": "admin123",
+            "role": "admin"
+        },
+        "user1": {
+            "password": "user123",
+            "role": "requester"
+        },
+        "user2": {
+            "password": "user456",
+            "role": "requester"
+        }
+    },
+    "validation": {
+        "min_gap_for_speaker_change": 1.0
+    },
+    "defaults": {
+        "timezone": "America/New_York",
+        "allow_waitlist": "Yes",
+        "waitlist_limit": 5,
+        "currency": "USD",
+        "visibility": "Public",
+        "status": "Active",
+        "max_enrollments": 25,
+        "default_price": 0,
+        "default_duration_minutes": 60,
+        "default_image_url": "https://via.placeholder.com/300"
+    },
+    "slug_format": {
+        "pattern": "(vtgsc|vtp|vtpsg|vtsaz)-([-a-zA-Z0-9]+)-(k-[1-9]|[1-9]-[1-9]|[1-9]|[1-9]-1[0-2]|9-12|adult)",
+        "example": "vtgsc-algebra-I-9-12"
+    }
+}
